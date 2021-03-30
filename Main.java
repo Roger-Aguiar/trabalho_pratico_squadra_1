@@ -7,9 +7,14 @@ public class Main
         System.out.println("Cozinha da Squadra\n");
 
         CozinhaMineira cozinhaMineira = new CozinhaMineira();
-        cozinhaMineira.CriarCozinha(); 
-        System.out.println("\n==========================================================================================");
-                                                
+        cozinhaMineira.CriarCozinha();
+
+        System.out.println("==========================================================================================");
+        
+        CozinhaChinesa cozinhaChinesa = new CozinhaChinesa();
+        cozinhaChinesa.CriarCozinha();                                        
+
+        System.out.println("==========================================================================================");
     }
 
     
