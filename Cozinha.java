@@ -1,25 +1,29 @@
 import java.time.LocalTime;
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Cozinha 
 {
     private LocalTime HoraDeAbertura;
     private LocalTime HoraDeFechamento;
     private String PratoPrincipal;
-    private LinkedList<String> Ingredientes = new LinkedList<String>();
-    private LinkedList<String> Funcionarios = new LinkedList<String>();
+
+    private ArrayList<String> Ingredientes;
+    private ArrayList<String> Funcionarios;
 
 
-    public Cozinha(int horaDeAtertura, int horaDeFechamento, String pratoPrincipal)
+    public Cozinha(int horaDeAtertura, int horaDeFechamento, String pratoPrincipal,
+                   ArrayList<String> ingredientes , ArrayList<String> funcionarios)
     {
         this.HoraDeAbertura = LocalTime.of(horaDeAtertura, 0);
         this.HoraDeFechamento = LocalTime.of(horaDeFechamento, 0);
         this.PratoPrincipal = pratoPrincipal;
+        this.Ingredientes = ingredientes;
+        this.Funcionarios = funcionarios;
     }    
 
-    public Cozinha(LinkedList<String> ingredientes , LinkedList<String> funcionarios, LinkedList<String> atividades)
+    public Cozinha()
     {
-
+        
     }
 
 
@@ -38,12 +42,12 @@ public class Cozinha
         return this.PratoPrincipal;
     }
 
-    public LinkedList<String> ObterListaDeIngredientes()
+    public ArrayList<String> ObterListaDeIngredientes()
     {
         return this.Ingredientes;
     }
 
-    public LinkedList<String> ObterListaDeFuncionarios()
+    public ArrayList<String> ObterListaDeFuncionarios()
     {
         return this.Funcionarios;
     }
