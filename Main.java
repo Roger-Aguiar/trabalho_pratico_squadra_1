@@ -15,7 +15,8 @@ public class Main
         cozinhaChinesa.CriarCozinha();                                        
 
         System.out.println("==========================================================================================");
-    }
 
-    
+        CozinhaItaliana cozinhaItaliana = new CozinhaItaliana();
+        cozinhaItaliana.CriarCozinha();
+    }    
 }
